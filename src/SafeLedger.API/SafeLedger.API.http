@@ -1,0 +1,6 @@
+@SafeLedger.API_HostAddress = http://localhost:5150
+
+GET {{SafeLedger.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

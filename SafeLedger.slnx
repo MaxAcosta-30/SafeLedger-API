@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SafeLedger.API/SafeLedger.API.csproj" />
+    <Project Path="src/SafeLedger.Application/SafeLedger.Application.csproj" />
+    <Project Path="src/SafeLedger.Domain/SafeLedger.Domain.csproj" />
+    <Project Path="src/SafeLedger.Infrastructure/SafeLedger.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SafeLedger.UnitTests/SafeLedger.UnitTests.csproj" />
+  </Folder>
+</Solution>
