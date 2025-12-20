@@ -12,6 +12,11 @@ public interface IUnitOfWork : IDisposable
     IAccountRepository Accounts { get; }
     
     /// <summary>
+    /// Obtiene el repositorio de transacciones.
+    /// </summary>
+    ITransactionRepository Transactions { get; }
+    
+    /// <summary>
     /// Guarda todos los cambios realizados en el contexto de unidad de trabajo actual.
     /// </summary>
     /// <param name="ct">Token de cancelación.</param>

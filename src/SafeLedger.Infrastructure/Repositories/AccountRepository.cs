@@ -26,6 +26,10 @@ public class AccountRepository(SafeLedgerDbContext context) : IAccountRepository
     /// Obtiene una cuenta por su identificador único con bloqueo pesimista usando hints SQL UPDLOCK y ROWLOCK.
     /// UPDLOCK: Indica intención de actualizar, previniendo que otras transacciones modifiquen la fila.
     /// ROWLOCK: Bloquea solo la fila específica, no toda la tabla, para mejor rendimiento.
+    /// 
+    /// NOTA: Esta implementación utiliza hints SQL específicos de SQL Server (UPDLOCK, ROWLOCK).
+    /// Al usar otras bases de datos o proveedores en memoria, estos hints pueden ser ignorados o generar errores.
+    /// Para pruebas con bases de datos en memoria, considere usar GetByIdAsync y manejar la concurrencia a nivel de aplicación.
     /// </summary>
     /// <param name="id">El identificador de la cuenta.</param>
     /// <param name="ct">Token de cancelación.</param>

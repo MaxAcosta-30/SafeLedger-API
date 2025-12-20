@@ -85,7 +85,7 @@ Todas las operaciones de transferencia se ejecutan dentro de transacciones de ba
 
 1. **Clonar el repositorio**
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/MaxAcosta-30/SafeLedger-API>
    cd SafeLedger
    ```
 

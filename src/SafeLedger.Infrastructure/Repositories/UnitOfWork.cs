@@ -14,6 +14,7 @@ public class UnitOfWork : IUnitOfWork
     private readonly SafeLedgerDbContext context;
 
     public IAccountRepository Accounts { get; }
+    public ITransactionRepository Transactions { get; }
 
     /// <summary>
     /// Inicializa una nueva instancia de la clase UnitOfWork.
@@ -23,6 +24,7 @@ public class UnitOfWork : IUnitOfWork
     {
         this.context = context;
         Accounts = new AccountRepository(context);
+        Transactions = new TransactionRepository(context);
     }
 
     /// <summary>

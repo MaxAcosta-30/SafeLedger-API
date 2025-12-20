@@ -56,6 +56,7 @@ public class TransferService(
                 request.Reference
             );
 
+            await unitOfWork.Transactions.AddAsync(transactionRecord, ct);
             await unitOfWork.SaveChangesAsync(ct);
             await transaction.CommitAsync(ct);
 
