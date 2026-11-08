@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-label="SafeLedger: Transferencias sin carreras de datos">
+  <rect width="1280" height="400" fill="#0E1014"/>
+  <text x="72" y="92" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="18" fill="#F0B67F" letter-spacing="2">.NET 10  ·  EF CORE  ·  SQL SERVER</text>
+  <text x="72" y="190" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="84" font-weight="700" fill="#EEF0F3" letter-spacing="-3">SafeLedger</text>
+  <text x="74" y="246" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="26" fill="#9AA1AD">Transferencias sin carreras de datos</text>
+  <text x="74" y="340" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#9AA1AD">Serie backend · Max Acosta</text>
+  <g transform="translate(860 60)"><path d="M0 50H340" stroke="#2A2F38" stroke-width="2"/><path d="M0 94H340" stroke="#2A2F38" stroke-width="2"/><path d="M0 138H340" stroke="#2A2F38" stroke-width="2"/><path d="M0 182H340" stroke="#2A2F38" stroke-width="2"/><path d="M0 226H340" stroke="#2A2F38" stroke-width="2"/>
+  <text x="4" y="80" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#EEF0F3">cuenta A  −1,500.00</text><text x="4" y="124" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#EEF0F3">cuenta B  +1,500.00</text>
+  <path d="M0 146H340M0 152H340" stroke="#F0B67F" stroke-width="2"/>
+  <rect x="236" y="58" width="96" height="30" rx="4" fill="none" stroke="#F0B67F" stroke-width="2"/>
+  <text x="250" y="78" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#F0B67F">UPDLOCK</text><text x="4" y="214" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="15" fill="#9AA1AD">idempotencia: misma respuesta</text></g>
+</svg>
