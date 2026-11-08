@@ -1,5 +1,7 @@
 # SafeLedger API (.NET 10 FinTech Core)
 
+<p align="center"><img src="docs/portada.svg" alt="SafeLedger: transferencias sin carreras de datos con bloqueos de fila e idempotencia" width="100%"></p>
+
 ## Descripción
 
 SafeLedger es una API transaccional de alto rendimiento diseñada con arquitectura limpia (Clean Architecture) para garantizar la integridad financiera y la seguridad en operaciones de transferencia entre cuentas. Construida con .NET 10 y C#, implementa patrones avanzados de concurrencia pesimista, idempotencia y detección de fraude.
@@ -37,9 +39,9 @@ La solución sigue los principios de **Clean Architecture**, separando las respo
 - **Infrastructure**: Implementa la persistencia con Entity Framework Core, repositorios y adaptadores. Depende de Domain y Application.
 - **API**: Capa de presentación con controladores, middlewares y configuración del pipeline HTTP. Depende de Application e Infrastructure.
 
-## Características Clave (Highlights)
+## Características clave
 
-### 🔒 Concurrencia Pesimista (SQL RowLock/UpdLock)
+### Concurrencia Pesimista (SQL RowLock/UpdLock)
 
 Implementación de bloqueos a nivel de fila usando hints SQL `UPDLOCK` y `ROWLOCK` para prevenir condiciones de carrera en operaciones financieras concurrentes:
 
@@ -50,7 +52,7 @@ SELECT * FROM Accounts WITH (UPDLOCK, ROWLOCK) WHERE Id = @id
 
 Esto garantiza que solo una transacción puede modificar una cuenta a la vez, eliminando el riesgo de pérdida de actualización (lost update) en escenarios de alta concurrencia.
 
-### 🔄 Patrón de Idempotencia con Caché
+### Patrón de Idempotencia con Caché
 
 Middleware que implementa idempotencia mediante el header `Idempotency-Key`, permitiendo reintentos seguros sin duplicar transacciones:
 
@@ -58,13 +60,13 @@ Middleware que implementa idempotencia mediante el header `Idempotency-Key`, per
 - Reintentos con la misma clave devuelven la respuesta cacheada sin ejecutar la operación nuevamente
 - Previene duplicación de transacciones en caso de timeouts o errores de red
 
-### 🛡️ Validaciones de Dominio y Detección de Fraude
+### Validaciones de Dominio y Detección de Fraude
 
 - **Validaciones de entrada**: FluentValidation para DTOs con reglas de negocio (montos positivos, precisión decimal, cuentas diferentes)
 - **Detección de fraude**: Servicio que analiza patrones sospechosos (montos elevados, horarios, etc.)
 - **Lógica de dominio encapsulada**: Los métodos `Credit()` y `Debit()` de `Account` garantizan invariantes de negocio
 
-### ⚡ Transacciones ACID
+### Transacciones ACID
 
 Todas las operaciones de transferencia se ejecutan dentro de transacciones de base de datos con garantías ACID:
 
@@ -73,7 +75,7 @@ Todas las operaciones de transferencia se ejecutan dentro de transacciones de ba
 - **Isolation**: Las transacciones concurrentes no interfieren entre sí
 - **Durability**: Los cambios se persisten de forma permanente
 
-## Setup
+## Cómo correrlo en local
 
 ### Prerrequisitos
 
